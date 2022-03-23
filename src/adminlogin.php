@@ -34,6 +34,7 @@ try {
 
       else if($v['userstatus']=="approved" && $v['userrole'] == "admin"){
         $_SESSION['admin']=true;
+        $_SESSION['admin'] = $v['username'];
         header("Location: dashboard.php");
         exit();
       }

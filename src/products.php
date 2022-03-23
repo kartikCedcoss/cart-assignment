@@ -2,8 +2,8 @@
 
 session_start();
 if(!isset($_SESSION['admin'])){
-  header("Location: adminlogin.php");
-  exit();
+  //header("Location: adminlogin.php");
+ // exit();
 }
 
 $servername = "mysql-server";
@@ -104,7 +104,9 @@ if(isset($_POST['addproduct'])){
         <td><input class="form-control" type="text" placeholder="Product Name" name="newpname"></td>
         <td><input class="form-control" type="text" placeholder=" Category" name="newpcat"></td>
         <td><input class="form-control" type="text" placeholder=" Price" name="newpprice"></td>
-        <td><input class="form-control" type="text" placeholder="Image" name="newpimage"></td>
+        
+       <td> <input class="form-control" type="file"  name="newpimage" /></td>
+       
         <td><input class="form-control" type="text" placeholder="Details" name="newpdetail"></td></tr>
       <tr>  <td><button type="submit" class="btn btn-primary" name="addproduct" value="addpro" >Add Product</button>
         </tr>';
@@ -114,7 +116,7 @@ if(isset($_POST['addproduct'])){
       }
       $conn = null;
       echo "</tbody></table>";
-
+     // <td><input class="form-control" type="text" placeholder="Image" ></td>
 
 }
 
