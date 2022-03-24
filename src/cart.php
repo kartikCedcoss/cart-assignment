@@ -100,8 +100,9 @@ function displaycart(){
 
 }
 if (isset($_POST['logout'])){
-    session_unset($_SESSION['user']);
-    session_unset($_SESSION['username']);
+    // session_unset($_SESSION['user']);
+    // session_unset($_SESSION['username']);
+    session_destroy();
 
     header("location:userlogin.php");
     exit();

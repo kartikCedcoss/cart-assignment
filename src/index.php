@@ -27,8 +27,9 @@ try {
   $conn = null;
   
   if (isset($_POST['logout'])){
-    session_unset($_SESSION['user']);
-    session_unset($_SESSION['username']);
+   // session_unset($_SESSION['user']);
+   // session_unset($_SESSION['username']);
+   session_destroy();
     header("location:userlogin.php");
     exit();
 }
@@ -121,9 +122,9 @@ try {
                 <div class="row justify-content-center" >
 
 
-                    <div class=" mt-4">
+                <div class="col-1 mt-4">
 
-                    </div>
+                  </div>
                
 
                     <?php
